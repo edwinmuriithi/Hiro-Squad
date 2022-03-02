@@ -37,4 +37,34 @@ public class Hero {
     public static List<Hero> all() {
         return instances;
     }
+    public static void clear() {
+        instances.clear();
+    }
+
+    public int getId()
+    {
+        return Id;
+    }
+
+    public static Hero find(int id) {
+        try {
+            return instances.get(id - 1);
+        } catch (IndexOutOfBoundsException exception) {
+            return null;
+        }
+    }
+
+    public static boolean findHeroByName(String name)
+    {
+        boolean isAvailable = false;
+        for (int i =0; i<instances.size(); i++)
+        {
+            if (name.equalsIgnoreCase(instances.get(i).name) )
+            {
+                isAvailable = true;
+            }
+        }
+
+        return isAvailable;
+    }
 }
