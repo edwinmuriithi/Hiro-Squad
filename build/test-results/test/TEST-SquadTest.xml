@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SquadTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-02T11:36:12" hostname="Muriithi" time="0.018">
+<testsuite name="SquadTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-03-02T11:45:38" hostname="Muriithi" time="0.032">
   <properties/>
-  <testcase name="Deletes all data" classname="SquadTest" time="0.018"/>
+  <testcase name="Check if Squad Name is Saved" classname="SquadTest" time="0.023"/>
+  <testcase name="Saves all Squads" classname="SquadTest" time="0.001"/>
+  <testcase name="Add Heroes to Squad" classname="SquadTest" time="0.001"/>
+  <testcase name="Instantiate Squad ID" classname="SquadTest" time="0.0"/>
+  <testcase name="Check max size" classname="SquadTest" time="0.0"/>
+  <testcase name="Check Squad Instantiates" classname="SquadTest" time="0.0"/>
+  <testcase name="Saves Squad Purpose" classname="SquadTest" time="0.0"/>
+  <testcase name="Deletes all data" classname="SquadTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

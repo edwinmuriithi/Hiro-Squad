@@ -52,4 +52,21 @@ public class SquadTest {
         Squad.clear();
         assertEquals(Squad.all().size(), 0);
     }
+
+    @Test
+    @DisplayName("Instantiate Squad ID")
+    public void getId_SquadInstantiateWithAnId_1() {
+        Squad.clear();
+        Squad squad = new Squad(5,"Avengers","Protecting Earth");
+        assertEquals(1,squad.getId());
+    }
+
+    @Test
+    @DisplayName("Add Heroes to Squad")
+    public void addsHeroesToList_true() {
+        Squad squad = new Squad(5,"Avengers","Protecting Earth");
+        Hero hero = new Hero("Stark",36,"Intelligence","Egotistic");
+        squad.addHero(hero);
+        assertTrue(squad.getHeroes().contains(hero));
+    }
 }
