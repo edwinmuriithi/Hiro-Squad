@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SquadTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-02T11:27:02" hostname="Muriithi" time="0.015">
+<testsuite name="SquadTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-02T11:36:12" hostname="Muriithi" time="0.018">
   <properties/>
-  <testcase name="Check max size" classname="SquadTest" time="0.015"/>
+  <testcase name="Deletes all data" classname="SquadTest" time="0.018"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
