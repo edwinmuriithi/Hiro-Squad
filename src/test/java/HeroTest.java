@@ -5,10 +5,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class HeroTest {
     @Test
-    @DisplayName("Checks if Hero Instantiates")
-    public void createsInstanceOfHero{
-        Hero hero = new Hero("Hulk",30,"Strength","Anger issues");
-        assertEquals(true, hero instanceof Hero);
+    @DisplayName("Check if Hero Instantiates")
+    public void createsInstanceOfHero()
+    {
+        Hero hero = new Hero("Stark",36,"Intelligence","Egotistic");
+        assertTrue(hero instanceof Hero);
     }
-
+    @Test
+    @DisplayName("Check if names are saved")
+    public void savesName()
+    {
+        Hero hero = new Hero("Stark",36,"Intelligence","Egotistic");
+        assertEquals("Stark",hero.getName());
+    }
 }
