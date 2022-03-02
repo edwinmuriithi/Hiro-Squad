@@ -22,4 +22,19 @@ public class Hero {
         public String getName() {
             return name;
         }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getSpecial_power() {
+        return specialPower;
+    }
+
+    public String getWeakness() {
+        return weakness;
+    }
+    public static List<Hero> all() {
+        return instances;
+    }
 }

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HeroTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-02T10:58:45" hostname="Muriithi" time="0.014">
+<testsuite name="HeroTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-03-02T11:06:16" hostname="Muriithi" time="0.025">
   <properties/>
-  <testcase name="Check if Hero Instantiates" classname="HeroTest" time="0.014"/>
+  <testcase name="Check if age is saved" classname="HeroTest" time="0.02"/>
+  <testcase name="Check if names are saved" classname="HeroTest" time="0.002"/>
+  <testcase name="Check if powers are saved" classname="HeroTest" time="0.0"/>
+  <testcase name="Check if Hero Instantiates" classname="HeroTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
