@@ -34,5 +34,28 @@ public class HeroTest {
         Hero hero = new Hero("Stark",30,"Intelligence","Egotistic");
         assertEquals("Intelligence",hero.getSpecial_power());
     }
+    @Test
+    @DisplayName("Check if weakness is saved")
+    public void savesWeakness()
+    {
+        Hero hero = new Hero("Stark",36,"Intelligence","Egotistic");
+        assertEquals("Egotistic",hero.getWeakness());
+    }
 
+    @Test
+    @DisplayName("Check if all info is Saved")
+    public void all_returns_all_instancesOfHero()
+    {
+        Hero hero = new Hero("Stark",36,"Intelligence","Egotistic");
+        Hero hero1 = new Hero("Thor",1500,"God-like","Childish");
+        assertTrue(Hero.all().contains(hero));
+        assertTrue(Hero.all().contains(hero1));
+    }
+
+    @Test
+    @DisplayName("Check if info can be deleted")
+    public void clear_emptiesAllCategoriesFromList_0() {
+        Hero.clear();
+        assertEquals(Hero.all().size(), 0);
+    }
 }
