@@ -11,4 +11,12 @@ public class SquadTest {
         Squad squad = new Squad(5,"Squad A","Avengers");
         assertTrue(squad instanceof Squad);
     }
+
+    @Test
+    @DisplayName("Check max size")
+    public void saves_maxSize_5()
+    {
+        Squad squad = new Squad(5,"Squad A","Avengers");
+        assertEquals(5, squad.getMax_size());
+    }
 }
