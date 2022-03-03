@@ -3,15 +3,19 @@ import java.util.Map;
 
 public class App {
 
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4568; //return default port if heroku-port isn't set (i.e. on localhost)
+    }
     public static void main(String[] args) {
 
-        ProcessBuilder process = new ProcessBuilder();
-        Integer port;
-        if (process.environment().get("PORT") != null) {
-            port = Integer.parseInt(process.environment().get("PORT"));
-        } else {
-            port = 4567;
-        }
-
+////Go to Hero Page
+//        get("/hero/:id", (req, res) -> {
+//            Map<String, Object> model = new HashMap<>();
+//            return new ModelAndView(model, "hero.hbs");
+//        }, new HandlebarsTemplateEngine());
     }
     }
