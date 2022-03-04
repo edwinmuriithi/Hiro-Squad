@@ -38,5 +38,23 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
+
+        //Squad View
+        get("/squadview", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "squadview.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        //Hero View
+        get("/heroview", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "heroview.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        //Success
+        get("/success", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
     }
     }
