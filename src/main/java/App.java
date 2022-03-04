@@ -21,6 +21,8 @@ public class App {
             port(getHerokuAssignedPort());
 
             staticFileLocation("/public");
+            String layout = "templates/layout.hbs";
+
         //home
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
@@ -51,10 +53,6 @@ public class App {
             return new ModelAndView(model, "heroview.hbs");
         }, new HandlebarsTemplateEngine());
 
-        //Success
-        get("/success", (request, response) -> {
-            Map<String, Object> model = new HashMap<String, Object>();
-            return new ModelAndView(model, "success.hbs");
-        }, new HandlebarsTemplateEngine());
+
     }
     }
