@@ -17,6 +17,10 @@ public class App {
     }
     public static void main(String[] args) {
 
+            //Heroku
+            port(getHerokuAssignedPort());
+
+            staticFileLocation("/public");
         //home
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
@@ -27,6 +31,12 @@ public class App {
         get("/hero", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "hero.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        //Squad
+        get("/squad", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
     }
     }

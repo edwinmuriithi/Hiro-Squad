@@ -1,0 +1,13 @@
+ #buttonAdd {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    width: 50%;
+    margin: 0 auto;
+    }
+
+    #bg  {
+        background: url('/images/justice.jpg') no-repeat center fixed;
+        background-size: cover;
+    }
