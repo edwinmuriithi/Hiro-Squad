@@ -1,0 +1,27 @@
+{{#partial "content"}}
+
+    <h1 class="squads">SQUADS</h1>
+    <div class="album py-5 ">
+        <div class="container">
+            <div class="row">
+                #foreach ($squad in $squads)
+                <div class="col-md-4">
+                    <div class="card  mb-4 box-shadow text-center">
+                        <div class="card-body">
+                            <h5 class="card-title"> $squad.getName() </h5>
+                            <p class="card-text"> $squad.getCause() </p>
+                            <a class="btn btn-primary" href="/squads/$squad.getId()">Details</a>
+                            <p class="text-muted">Max size: $squad.getMax_size()</p>
+                        </div>
+                    </div>
+                </div>
+                #end
+            </div>
+
+            <div>
+                <a class="btn btn-info d-flex justify-content-center" style ="max-width:10rem" href="/squads/new">Add New Squad</a>
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

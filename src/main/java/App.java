@@ -21,6 +21,8 @@ public class App {
             port(getHerokuAssignedPort());
 
             staticFileLocation("/public");
+            String layout = "templates/layout.hbs";
+
         //home
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
@@ -38,5 +40,25 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
+
+        //Squad View
+        get("/squadview", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "squadview.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        //Hero View
+        get("/heroview", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "heroview.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/squaddetails", (req, res) -> {
+            System.out.println(Squad.all());
+            Map<String, Object> model = new HashMap<>();
+            model.put("squads", Squad.all());
+            return new ModelAndView(model, "squaddetails.hbs");
+        }, new HandlebarsTemplateEngine());
+
     }
     }
