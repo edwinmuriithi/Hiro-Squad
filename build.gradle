@@ -9,6 +9,10 @@ version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
+mainClassName= 'App'
+
+sourceCompatibility= 1.8
+applicationName= 'hiro-squad-heroku'
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
@@ -22,3 +26,4 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+task stage(dependsOn: ['clean', 'installDist'])
